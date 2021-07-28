@@ -10,7 +10,7 @@ namespace DataAccessLayer
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace DataAccessLayer
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, Login = "admin", Password = "", Role = "admin"}
+                new User { Id = 1, Login = "admin", Password = "19a2854144b63a8f7617a6f225019b12", Role = "admin"}
                 );
         }
     }
