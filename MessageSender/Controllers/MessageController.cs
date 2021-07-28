@@ -36,6 +36,17 @@ namespace PresentationLayer.Controllers
             return Ok(messages);
         }
 
+        [HttpGet("{id}")]
+        public ContentResult GetHtmlMessage(int id)
+        {
+            string message = service.GetUserMessageById(id);
+            if (message == null)
+            {
+                message = "Empty";
+            }
+            return base.Content(message, "text/html; charset=utf-8");
+        }
+
         [HttpPost]
         public async Task<IActionResult> Send([FromBody]NewMessageRequest newMessage)
         {

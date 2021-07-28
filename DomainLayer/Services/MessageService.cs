@@ -64,6 +64,23 @@ namespace BusinessLogicLayer.Services
             }
         }
 
+        public string GetUserMessageById(int id)
+        {
+            Message message = repository.Get<Message>(x => x.Id == id);
+            if (message == null)
+            {
+                return null;
+            }
+            else
+            {
+                if (httpContextAccessor.Role.Equals("admin") || httpContextAccessor.Id == message.UserId)
+                {
+                    return message.Text;
+                }
+                return null;
+            }
+        }
+
         public async Task<int> UpdateMessage(MessageModel model)
         {
             Message message = repository.Get<Message>(x => x.Id == model.Id);

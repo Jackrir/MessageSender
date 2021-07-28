@@ -11,6 +11,8 @@ namespace BusinessLogicLayer.Interfaces
     {
         IEnumerable<CreatedMessageModel> GetAllUserMessages();
 
+        string GetUserMessageById(int id);
+
         Task AddNewMessage(MessageModel model);
 
         Task<int> UpdateMessage(MessageModel model);
