@@ -29,7 +29,7 @@ namespace PresentationLayer.Controllers
         {
             if(ModelState.IsValid)
             {
-                if(await auth.LogIn(mapper.Map<UserModel>(model), HttpContext))
+                if(await auth.LogIn(mapper.Map<UserModel>(model)))
                 {
                     return Ok();
                 }
@@ -43,7 +43,7 @@ namespace PresentationLayer.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await auth.Registration(mapper.Map<UserModel>(model), HttpContext))
+                if (await auth.Registration(mapper.Map<UserModel>(model)))
                 {
                     return Ok();
                 }
@@ -56,7 +56,7 @@ namespace PresentationLayer.Controllers
         [Authorize]
         public async Task<IActionResult> LogOut()
         {
-            await auth.LogOut(HttpContext);
+            await auth.LogOut();
             return Ok();
         }
     }

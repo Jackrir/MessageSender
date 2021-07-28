@@ -37,6 +37,7 @@ namespace MessageSender
                     options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Auth/Login");
                 }); ;
             services.AddAutoMapper(typeof(PresentationMapperProfile), typeof(BusinessLogicMapperProfile));
+            services.AddHttpContextAccessor();
             services.AddMessageSenderServices();
         }
 
@@ -76,6 +77,8 @@ namespace MessageSender
         {
             services.AddScoped<IRepository, Repository>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<IMessageSenderHttpContextAccessor, MessageSenderHttpContextAccessor>();
         }
     }
 }

@@ -9,8 +9,8 @@ namespace BusinessLogicLayer.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> LogIn(UserModel model, HttpContext context);
-        Task<bool> Registration(UserModel model, HttpContext context);
-        Task LogOut(HttpContext context);
+        Task<bool> LogIn(UserModel model);
+        Task<bool> Registration(UserModel model);
+        Task LogOut();
     }
 }

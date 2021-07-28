@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "MessageSender\PresentationLayer.csproj", "{9711C14C-A973-4907-A65F-D228D25B4574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayer", "MessageSender\PresentationLayer.csproj", "{9711C14C-A973-4907-A65F-D228D25B4574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "DomainLayer\BusinessLogicLayer.csproj", "{358F16EE-C6ED-4721-B213-E27BE7E926B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicLayer", "DomainLayer\BusinessLogicLayer.csproj", "{358F16EE-C6ED-4721-B213-E27BE7E926B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{4C8EBA42-5C3A-46F1-B2B2-2FB912EE4F4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{4C8EBA42-5C3A-46F1-B2B2-2FB912EE4F4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
